@@ -23,7 +23,8 @@ FROM registry.conarx.tech/containers/alpine/3.20 AS ruby-builder
 
 
 # Latest? - https://www.ruby-lang.org/en/downloads/branches/
-ENV RUBY_VER=3.3.5
+# UPDATE IN NEXT SECTION TOO
+ENV RUBY_VER=3.3.6
 
 
 # Copy build patches
@@ -126,7 +127,7 @@ LABEL org.opencontainers.image.version="3.20"
 LABEL org.opencontainers.image.base.name="registry.conarx.tech/containers/alpine/3.20"
 
 # Latest? - https://www.ruby-lang.org/en/downloads/branches/
-ENV RUBY_VER=3.3.5
+ENV RUBY_VER=3.3.6
 
 ENV FDC_DISABLE_SUPERVISORD=true
 ENV FDC_QUIET=true
