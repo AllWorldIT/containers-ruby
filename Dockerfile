@@ -122,9 +122,9 @@ RUN set -eux; \
 FROM registry.conarx.tech/containers/alpine/edge
 
 ARG VERSION_INFO=
-LABEL org.opencontainers.image.authors="Nigel Kukard <nkukard@conarx.tech>"
-LABEL org.opencontainers.image.version="edge"
-LABEL org.opencontainers.image.base.name="registry.conarx.tech/containers/alpine/edge"
+LABEL org.opencontainers.image.authors		= "Nigel Kukard <nkukard@conarx.tech>"
+LABEL org.opencontainers.image.version		= "edge"
+LABEL org.opencontainers.image.base.name	= "registry.conarx.tech/containers/alpine/edge"
 
 # Latest? - https://www.ruby-lang.org/en/downloads/branches/
 ENV RUBY_VER=3.3.6
