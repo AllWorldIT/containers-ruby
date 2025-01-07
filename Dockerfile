@@ -1,4 +1,4 @@
-# Copyright (c) 2022-2023, AllWorldIT.
+# Copyright (c) 2022-2025, AllWorldIT.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -19,7 +19,7 @@
 # IN THE SOFTWARE.
 
 
-FROM registry.conarx.tech/containers/alpine/3.20 AS ruby-builder
+FROM registry.conarx.tech/containers/alpine/edge AS ruby-builder
 
 
 # Latest? - https://www.ruby-lang.org/en/downloads/branches/
@@ -119,12 +119,12 @@ RUN set -eux; \
 	du -hs .
 
 
-FROM registry.conarx.tech/containers/alpine/3.20
+FROM registry.conarx.tech/containers/alpine/edge
 
 ARG VERSION_INFO=
-LABEL org.opencontainers.image.authors="Nigel Kukard <nkukard@conarx.tech>"
-LABEL org.opencontainers.image.version="3.20"
-LABEL org.opencontainers.image.base.name="registry.conarx.tech/containers/alpine/3.20"
+LABEL org.opencontainers.image.authors		= "Nigel Kukard <nkukard@conarx.tech>"
+LABEL org.opencontainers.image.version		= "edge"
+LABEL org.opencontainers.image.base.name	= "registry.conarx.tech/containers/alpine/edge"
 
 # Latest? - https://www.ruby-lang.org/en/downloads/branches/
 ENV RUBY_VER=3.3.6
