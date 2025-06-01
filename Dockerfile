@@ -19,7 +19,7 @@
 # IN THE SOFTWARE.
 
 
-FROM registry.conarx.tech/containers/alpine/3.21 AS ruby-builder
+FROM registry.conarx.tech/containers/alpine/3.22 AS ruby-builder
 
 
 # Latest? - https://www.ruby-lang.org/en/downloads/branches/
@@ -119,12 +119,12 @@ RUN set -eux; \
 	du -hs .
 
 
-FROM registry.conarx.tech/containers/alpine/3.21
+FROM registry.conarx.tech/containers/alpine/3.22
 
 ARG VERSION_INFO=
 LABEL org.opencontainers.image.authors		= "Nigel Kukard <nkukard@conarx.tech>"
-LABEL org.opencontainers.image.version		= "3.21"
-LABEL org.opencontainers.image.base.name	= "registry.conarx.tech/containers/alpine/3.21"
+LABEL org.opencontainers.image.version		= "3.22"
+LABEL org.opencontainers.image.base.name	= "registry.conarx.tech/containers/alpine/3.22"
 
 # Latest? - https://www.ruby-lang.org/en/downloads/branches/
 ENV RUBY_VER=3.4.4
